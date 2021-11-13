@@ -1,7 +1,7 @@
 -- ex:1
 /* Large objects (videos, CAD files, photos, etc.) are stored as:
 blob(binary large object) - an object is a large collection of uninterpreted binary data
-clob(character large object) - an object is a large collection of symbolic data. *\
+clob(character large object) - an object is a large collection of symbolic data. */
 
 -- ex:2
 create role accountant;
@@ -22,6 +22,7 @@ create role god createtole;
 grant god ErkeEsmakhan;
 --or
 after role support createrole;
+
 revoke delete on accounts from ErkeEsmakhan;
 
 -- ex:3
