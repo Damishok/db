@@ -27,10 +27,7 @@ revoke delete on accounts from ErkeEsmakhan;
 
 -- ex:3
 create assertion sm_curr check
-((select currency
-  from accounts a join transactions on a.account_id = t.src_account) =
-    (select currency
-     from accounts a join transactions on a.account_id = t.dst_account));
+((select currency from accounts a join transactions on a.account_id = t.src_account) = (select currency from accounts a join transactions on a.account_id = t.dst_account));
      
 alter table customers alter column birth_date set not null;
 ALTER TABLE accounts ALTER COLUMN currency SET NOT null;
