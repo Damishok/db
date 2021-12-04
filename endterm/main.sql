@@ -130,3 +130,32 @@ INSERT INTO purchase
 VALUES (32654, 77780, 36144, 58745, 32547, 30000000, 44009874, '2010-11-23', '50kk');
 INSERT INTO purchase
 VALUES (98541, 97824, 12547, 32547, 54778, 38000000, 44001147, '2013-08-12', '38kk');
+
+SELECT gender, purchase.purchase_date, purchase.total_price
+FROM purchase
+INNER JOIN buyer b on b.id = purchase.buyer_id
+WHERE purchase_date = '2011' OR purchase_date = '2013' OR purchase_date = '2014'
+GROUP BY gender, purchase.purchase_date, purchase.total_price;
+
+SELECT count(buyer_id)
+FROM buyer
+INNER JOIN dealers d on buyer.id = d.buyer_id
+GROUP BY gender;
+
+SELECT purchase_date, total_price
+FROM purchase
+ORDER BY purchase_date DESC;
+
+SELECT vehicle.title, vehicle.type, vehicle.manufacturer
+FROM vehicle
+INNER JOIN public.options o on vehicle.id = o.vehicle_id
+GROUP BY vehicle.id
+ORDER BY vehicle DESC
+LIMIT 2;
+
+SELECT vehicle.title, vehicle.type, vehicle.manufacturer
+FROM vehicle
+INNER JOIN options o on vehicle.id = o.vehicle_id
+GROUP BY vehicle.id
+ORDER BY vehicle DESC
+LIMIT 2;
