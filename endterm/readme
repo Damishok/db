@@ -1,0 +1,12 @@
+PROJECT DATABASE
+Instructor: Aibek T. Kuralbaev
+Intern: Olzhas Dairov
+Student: Erzhigitov Damir
+Deadline: 04.12.2021 23:59
+Alula, [04.12.2021 23:36]
+1. The create.sql file contains the code for creating tables according to the ER model schema.  Tables such as: Dealer, Customer, Transaction, Vehicles, Companies, Brands, etc
+2. The insert.sql file contains code for filling tables with data corresponding to the queries in the task.
+3. The query.sql file contains the code of the queries that need to be executed according to the requirements in the task.  
+For example: 1. Find sales for the year, month and week. 
+                        2. Find the 2 leading brands by sales over the past year.
+4. There is also an ERD.pdf model file in the Project folder.
